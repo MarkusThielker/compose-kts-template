@@ -62,7 +62,7 @@ android {
 dependencies {
 
     // android core
-    implementation("androidx.core:core-ktx:1.7.0")
+    implementation("androidx.core:core-ktx:1.8.0")
     implementation("androidx.activity:activity-compose:1.4.0")
 
     // android lifecycle
@@ -75,8 +75,8 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended:$composeVersion")
 
     // material design
-    implementation("androidx.compose.material3:material3:1.0.0-alpha09")
-    implementation("com.google.android.material:material:1.5.0")
+    implementation("androidx.compose.material3:material3:1.0.0-alpha13")
+    implementation("com.google.android.material:material:1.6.1")
 
     // timber logging
     implementation("com.jakewharton.timber:timber:5.0.1")
