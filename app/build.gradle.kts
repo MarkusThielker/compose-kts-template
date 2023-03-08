@@ -2,13 +2,13 @@ val composeVersion: String by project
 val lifecycleVersion: String by project
 
 plugins {
-    id("com.android.application") version "7.1.3"
-    kotlin("android") version "1.6.10"
+    id("com.android.application") version "7.4.2"
+    kotlin("android") version "1.8.10"
 }
 
 android {
 
-    compileSdk = 32
+    compileSdk = 33
     namespace = "dev.thielker.custom"
 
     defaultConfig {
@@ -16,7 +16,7 @@ android {
         applicationId = "dev.thielker.custom"
 
         minSdk = 26
-        targetSdk = 32
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -48,7 +48,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = composeVersion
+        kotlinCompilerExtensionVersion = "1.4.3"
     }
 
     packagingOptions {
@@ -62,32 +62,32 @@ android {
 dependencies {
 
     // android core
-    implementation("androidx.core:core-ktx:1.8.0")
-    implementation("androidx.activity:activity-compose:1.4.0")
+    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.activity:activity-compose:1.6.1")
 
     // android lifecycle
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
 
     // jetpack compose
-    implementation("androidx.compose.ui:ui:$composeVersion")
-    implementation("androidx.compose.ui:ui-tooling-preview:$composeVersion")
-    implementation("androidx.compose.material:material-icons-extended:$composeVersion")
+    implementation("androidx.compose.ui:ui:1.3.3")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.3.3")
+    implementation("androidx.compose.material:material-icons-extended:1.3.1")
 
     // material design
-    implementation("androidx.compose.material3:material3:1.0.0-alpha13")
-    implementation("com.google.android.material:material:1.6.1")
+    implementation("androidx.compose.material3:material3:1.1.0-alpha07")
+    implementation("com.google.android.material:material:1.8.0")
 
     // timber logging
     implementation("com.jakewharton.timber:timber:5.0.1")
 
     // androidx testing
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     // jetpack compose testing
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:$composeVersion")
-    debugImplementation("androidx.compose.ui:ui-tooling:$composeVersion")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:$composeVersion")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.3")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.3.3")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.3.3")
 }
