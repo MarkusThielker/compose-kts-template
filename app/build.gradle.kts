@@ -2,8 +2,8 @@ val composeVersion: String by project
 val lifecycleVersion: String by project
 
 plugins {
-    id("com.android.application") version "7.4.2"
-    kotlin("android") version "1.8.10"
+    id("com.android.application") version "8.1.1"
+    kotlin("android") version "1.9.10"
 }
 
 android {
@@ -48,7 +48,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
 
     packagingOptions {
@@ -62,21 +62,21 @@ android {
 dependencies {
 
     // android core
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.activity:activity-compose:1.6.1")
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.activity:activity-compose:1.8.0")
 
     // android lifecycle
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
 
     // jetpack compose
-    implementation("androidx.compose.ui:ui:1.3.3")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.3.3")
-    implementation("androidx.compose.material:material-icons-extended:1.3.1")
+    implementation("androidx.compose.ui:ui:1.5.3")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.5.3")
+    implementation("androidx.compose.material:material-icons-extended:1.5.3")
 
     // material design
-    implementation("androidx.compose.material3:material3:1.1.0-alpha07")
-    implementation("com.google.android.material:material:1.8.0")
+    implementation("androidx.compose.material3:material3:1.2.0-alpha09")
+    implementation("com.google.android.material:material:1.10.0")
 
     // timber logging
     implementation("com.jakewharton.timber:timber:5.0.1")
@@ -87,7 +87,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     // jetpack compose testing
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.3")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.3.3")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.3.3")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.5.3")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.5.3")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.5.3")
 }
